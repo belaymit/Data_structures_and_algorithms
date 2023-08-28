@@ -24,8 +24,17 @@ def inOrderTraversal(root):
         return
     else:
         inOrderTraversal(root.left)
-        print(root.data)
+        print(root.data, end=' ')
         inOrderTraversal(root.right)
+
+def preOrderTraversal(root):
+    if root is None:
+        return
+    else:
+        print(root.data, end=' ')
+        preOrderTraversal(root.left)
+        preOrderTraversal(root.right)
+
 
 if __name__ == '__main__':
     print('Binary tree')
@@ -42,4 +51,5 @@ if __name__ == '__main__':
     root.insert('j')
     root.insert('k')
     
-inOrderTraversal(root)
+# inOrderTraversal(root)
+preOrderTraversal(root)
